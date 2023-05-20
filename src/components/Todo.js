@@ -19,11 +19,11 @@ function Todo({todos,completeTodo,removeTodo,updateTodo}) {
 
 
     if(edit.id){
-        return <TodoForm onSubmit={submitTodo}/>
+        return <TodoForm edit={edit} onSubmit={submitTodo}/>
     }
 
  return todos.map((todo,index)=>(
-    <div className={`flex w-full gap-5 bg-red-500 justify-between px-4 items-center py-4 rounded-lg ${todo.isComplete && "line-through"}`} key={index}>
+    <div className={`flex w-full duration-200 hover:scale-90 gap-5 bg-red-500 justify-between px-4 items-center py-4 rounded-lg ${todo.isComplete && "line-through"}`} key={index}>
         <div key={todo.id} onClick={()=>completeTodo(todo.id)} className='flex-[0.8] overflow-x-clip text-xl'>
             {todo.text}
         </div>
