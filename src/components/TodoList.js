@@ -46,7 +46,7 @@ function TodoList() {
 
 
   return (
-    <div className='flex flex-col gap-3   bg-purple-950 text-white px-5 py-10 rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'>
+    <div className='flex flex-col gap-3  w-[30rem] bg-purple-950 text-white px-5 py-10 rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'>
         <h1 className='text-3xl'>Whats the plan for today ?</h1>
         <TodoForm  onSubmit={addTodo} />
         <Todo 
