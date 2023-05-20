@@ -10,6 +10,11 @@ function TodoForm() {
     const handleSubmit=(e)=>{
         e.preventDefault();
 
+        // TODO:Add logic to add the todo
+        
+        // emptying the input field after adding the Todo
+        setInput("");
+
     }
 
   return (
