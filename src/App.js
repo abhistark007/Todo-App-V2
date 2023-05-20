@@ -5,7 +5,7 @@ import TodoList from './components/TodoList';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-gradient-to-br min-h-screen from-purple-800 to-purple-500 flex flex-col justify-center items-center">
       <TodoList/>
     </div>
   );

@@ -5,13 +5,15 @@ import Todo from './Todo';
 function TodoList() {
     const [todos,setTodos]=useState([]);
 
+    // Add todo in todo state variable
     const addTodo = (todo)=>{
         // if text is empty then return
         if(!todo.text || /^\s*$/.test(todo.text)){
             return;
         }
-
+        // Add new todo in the beginning in the old list of todos
         const newTodos=[todo,...todos];
+        // set the new values of todos
         setTodos(newTodos);
     }
 
@@ -44,8 +46,8 @@ function TodoList() {
 
 
   return (
-    <div className='flex flex-col'>
-        <h1>Whats the plan for today</h1>
+    <div className='flex flex-col gap-3   bg-purple-950 text-white px-5 py-10 rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'>
+        <h1 className='text-3xl'>Whats the plan for today ?</h1>
         <TodoForm  onSubmit={addTodo} />
         <Todo 
         todos={todos}
